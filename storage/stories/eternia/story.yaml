@@ -1,0 +1,253 @@
+title: Le Chemin Interdit
+scripts-path: ../../scripts/fantasy_quest
+story:
+  - name: intro
+    script: intro.txt
+    choices:
+      - text: "Commencer l'aventure"
+        target: village
+  - name: village
+    script: village.txt
+    choices:
+      - text: "Aller au marché"
+        target: market
+      - text: "Explorer la forêt proche"
+        target: forest
+      - text: "Partir vers les ruines mystérieuses"
+        target: ruins
+  - name: market
+    script: market.txt
+    choices:
+      - text: "Parler au vieil ermite"
+        target: hermit
+      - text: "Acheter des provisions"
+        target: provisions
+      - text: "Retourner au village"
+        target: village
+  - name: hermit
+    script: hermit.txt
+    choices:
+      - text: "Écouter les contes du vieil homme"
+        target: tale
+      - text: "Ignorer et partir"
+        target: village
+  - name: tale
+    script: tale.txt
+    choices:
+      - text: "Se diriger vers la forêt enchantée"
+        target: enchanted_forest
+      - text: "Suivre les instructions du vieil homme"
+        target: secret_path
+  - name: provisions
+    script: provisions.txt
+    choices:
+      - text: "Partir vers la forêt"
+        target: forest
+      - text: "Partir vers les ruines"
+        target: ruins
+  - name: forest
+    script: forest.txt
+    choices:
+      - text: "S'enfoncer dans les ténèbres de la forêt"
+        target: deep_forest
+      - text: "Chercher un chemin sûr"
+        target: clearing
+  - name: deep_forest
+    script: deep_forest.txt
+    choices:
+      - text: "Suivre une lueur étrange"
+        target: glowing_path
+      - text: "Écouter les bruits inquiétants"
+        target: ambush
+  - name: clearing
+    script: clearing.txt
+    choices:
+      - text: "Se reposer et observer"
+        target: observation
+      - text: "Continuer prudemment"
+        target: ruins
+  - name: ruins
+    script: ruins.txt
+    choices:
+      - text: "Explorer un ancien temple"
+        target: temple
+      - text: "Entrer dans une crypte abandonnée"
+        target: crypt
+  - name: temple
+    script: temple.txt
+    choices:
+      - text: "Lire les inscriptions"
+        target: riddle
+      - text: "Prendre une statue mystérieuse"
+        target: curse
+  - name: crypt
+    script: crypt.txt
+    choices:
+      - text: "Ouvrir un sarcophage"
+        target: sarcophagus
+      - text: "Fouiller des recoins sombres"
+        target: hidden_passage
+  - name: enchanted_forest
+    script: enchanted_forest.txt
+    choices:
+      - text: "Rencontrer une fée bienveillante"
+        target: fairy
+      - text: "Suivre un chemin fleuri"
+        target: lost_city
+  - name: secret_path
+    script: secret_path.txt
+    choices:
+      - text: "Découvrir un passage secret"
+        target: cave
+      - text: "Retourner en arrière"
+        target: village
+  - name: ambush
+    script: ambush.txt
+    choices:
+      - text: "Se défendre contre l'attaque"
+        target: battle
+      - text: "Fuir rapidement"
+        target: deep_forest
+  - name: riddle
+    script: riddle.txt
+    choices:
+      - text: "Résoudre l'énigme"
+        target: treasure
+      - text: "Ignorer et prendre la statue"
+        target: curse
+  - name: sarcophagus
+    script: sarcophagus.txt
+    choices:
+      - text: "Ouvrir le sarcophage"
+        target: mummy
+      - text: "Laisser reposer en paix"
+        target: crypt
+  - name: hidden_passage
+    script: hidden_passage.txt
+    choices:
+      - text: "Suivre le passage étroit"
+        target: dragon_lair
+      - text: "Revenir au temple"
+        target: temple
+  - name: fairy
+    script: fairy.txt
+    choices:
+      - text: "Accepter son aide magique"
+        target: magic
+      - text: "Refuser et continuer seul"
+        target: lost_city
+  - name: cave
+    script: cave.txt
+    choices:
+      - text: "Explorer les profondeurs"
+        target: underground_lake
+      - text: "S'échapper rapidement"
+        target: village
+  - name: lost_city
+    script: lost_city.txt
+    choices:
+      - text: "Explorer la cité oubliée"
+        target: final_battle
+      - text: "Chercher des indices sur le passé"
+        target: historical_research
+  - name: battle
+    script: battle.txt
+    choices:
+      - text: "Lutter avec bravoure"
+        target: ending_glorious
+      - text: "Être submergé par l'ennemi"
+        target: ending_doom
+  - name: treasure
+    script: treasure.txt
+    choices:
+      - text: "Prendre le trésor"
+        target: ending_glorious
+      - text: "Refuser et sortir prudemment"
+        target: ending_mysterious
+  - name: magic
+    script: magic.txt
+    choices:
+      - text: "Utiliser la magie pour se défendre"
+        target: battle
+      - text: "Explorer une source de pouvoir ancienne"
+        target: ancient_power
+  - name: ancient_power
+    script: ancient_power.txt
+    choices:
+      - text: "Accepter le pouvoir, mais en payer le prix"
+        target: ending_doom
+      - text: "L'utiliser pour sauver le royaume"
+        target: ending_glorious
+  - name: mummy
+    script: mummy.txt
+    choices:
+      - text: "Échapper à la malédiction"
+        target: crypt
+      - text: "Combattre la momie"
+        target: battle
+  - name: dragon_lair
+    script: dragon_lair.txt
+    choices:
+      - text: "Affronter le dragon"
+        target: final_battle
+      - text: "Fuir et avertir le royaume"
+        target: ending_mysterious
+  - name: underground_lake
+    script: underground_lake.txt
+    choices:
+      - text: "Plonger dans le lac"
+        target: secret_treasure
+      - text: "Chercher une sortie"
+        target: village
+  - name: historical_research
+    script: historical_research.txt
+    choices:
+      - text: "Découvrir une prophétie ancienne"
+        target: final_battle
+      - text: "Rester pour étudier encore"
+        target: ending_mysterious
+  - name: secret_treasure
+    script: secret_treasure.txt
+    choices:
+      - text: "Prendre le trésor enfoui"
+        target: ending_glorious
+      - text: "Refuser pour éviter une malédiction"
+        target: ending_doom
+  - name: final_battle
+    script: final_battle.txt
+    choices:
+      - text: "Combattre l'ultime ennemi"
+        target: ending_glorious
+      - text: "Se sacrifier pour sauver le royaume"
+        target: ending_mysterious
+  - name: ending_glorious
+    script: ending_glorious.txt
+    choices: []
+  - name: ending_doom
+    script: ending_doom.txt
+    choices: []
+  - name: ending_mysterious
+    script: ending_mysterious.txt
+    choices: []
+  - name: glowing_path
+    script: glowing_path.txt
+    choices:
+      - text: "Suivre la lumière mystérieuse"
+        target: treasure
+      - text: "Revenir sur vos pas"
+        target: deep_forest
+  - name: observation
+    script: observation.txt
+    choices:
+      - text: "Suivre l'indice"
+        target: hidden_passage
+      - text: "Retourner au village"
+        target: village
+  - name: curse
+    script: curse.txt
+    choices:
+      - text: "Se laisser envahir par la malédiction"
+        target: ending_doom
+      - text: "Lutter contre la malédiction"
+        target: battle
+
